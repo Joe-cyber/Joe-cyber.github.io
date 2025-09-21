@@ -819,7 +819,7 @@
         <header class="web-header">
             <div class="web-header-content">
                 <div class="web-photo-container">
-                    Foto
+                    <img src="./profile-pc.jpg"/>
                 </div>
                 <h1 class="web-name">GIOACCHINO CALIENDO</h1>
                 <p class="web-title">Backend Engineer • Solution Architect • IoT Enthusiast</p>
@@ -1481,7 +1481,15 @@
             justify-content: center;
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
+            overflow: hidden; /* Importante per nascondere parti eccedenti */
         }
+
+            .web-photo-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Mantiene proporzioni e riempie il contenitore */
+                object-position: center; /* Centra l'immagine */
+            }
 
         .web-name {
             font-size: 3rem;
